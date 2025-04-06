@@ -1,0 +1,113 @@
+.overview {
+    height: 50em;
+    width: 100%;
+}
+
+.matrix {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    margin: 8em 0 0 18em;
+    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    grid-template-columns: repeat(auto-fill, minmax(5em, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(5em, 1fr));
+}
+
+.description {
+    margin: 2em;
+    width: auto;
+}
+
+.rowDropdown {
+    margin: 0 10em 0 0.5em;
+}
+
+.icon {
+    float: right;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+}
+
+.face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 25em;
+    height: 25em;
+    transition: all 0.5s ease-in-out;
+    border: 2em solid transparent;
+}
+
+.face1 {
+    transform: translateX(0px) translateY(0px) translateZ(12.5em);
+    border-top: hidden;
+    border-right: hidden;
+    margin: 2em 2em 0 0;
+}
+
+.face2 {
+    transform: rotateY(90deg) translateX(0px) translateY(-8px) translateZ(12.25em);
+    border-top: hidden;
+    border-left: hidden;
+    margin: 2em 0 0 2em;
+}
+
+.face3 {
+    transform: rotateX(90deg) translateX(18px) translateY(7px) translateZ(12.2em);
+    border-bottom: hidden;
+    border-right: hidden;
+    margin: 0 2em 2em 0;
+}
+
+.face4 {
+    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(12.5em);
+}
+
+.face5 {
+    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(12.5em);
+}
+
+.face6 {
+    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(12.5em);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-text {
+    visibility: hidden;
+    width: 10em;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 150%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon:hover .icon-text {
+    visibility: visible;
+    opacity: 1;
+}
