@@ -1,0 +1,41 @@
+.overview {
+    height: 50em;
+    width: 100%;
+}
+
+.description {
+    margin: 2em;
+    width: auto;
+}
+
+.icon {
+    float: right;
+    position: relative;
+    display: inline-block;
+}
+
+.icon_text {
+    visibility: hidden;
+    width: 10em;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 150%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon:hover .icon_text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button {
+    margin-left: 2em;
+    background-color: #4CAF50;
+}
